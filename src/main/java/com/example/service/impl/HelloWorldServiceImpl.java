@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
  */
 @Service("HelloWorldService")
 public class HelloWorldServiceImpl implements HelloWorldService {
+
     @Resource
     private UserMapper userDao;
 
