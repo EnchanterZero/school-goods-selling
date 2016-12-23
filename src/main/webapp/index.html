@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this is a page</title>
+</head>
+<body>
+<div id="block">
+    <button class="btn">get hello/world {id:1}</button>
+    <p>985</p>
+    <button class="btn">post hello/rest/123 {msg:balabala}</button>
+    <p>412</p>
+    <button class="btn">try HelloWorld111.jsp</button>
+    <p>312</p>
+    <button class="btn">get HelloWorld1111.jsp</button>
+    <p>124</p>
+    <button class="btn">get HelloWorld11111.jsp</button>
+    <p>897</p>
+</div>
+<button id="clear_btn">clear all</button>
+<script src="src/lib/jquery/dist/jquery.min.js" ></script>
+<script type="text/javascript">
+    //alert("-----  loading!!!!");
+    $(document).ready(function(){
+        //alert("-----  ready!!!!");
+        $("#block").on('click','.btn',function(){
+            //console.log($(this));
+            var para = $(this).html();
+            var opts = para.split(" ");
+            console.log(opts);
+            var settings = {
+                type:opts[0].toUpperCase(),
+                //contentType
+                url:opts[1],
+                data:opts[2],
+                async:false
+            };
+            console.log(settings);
+            htmlobj=$.ajax(settings);
+            console.log(htmlobj);
+            $(this).next().html(htmlobj.responseText);
+        });
+
+        $("#clear_btn").click(function(){
+            console.log($(this));
+            var pList = $("#block  p");
+            for(var i = 0;i<pList.length;i++){
+                $(pList[i]).html("--");
+            }
+        });
+    });
+</script>
+</body>
+</html>
