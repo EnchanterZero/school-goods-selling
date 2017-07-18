@@ -12,6 +12,6 @@
     <title>Title</title>
 </head>
 <body>
-${user.nickname}
+${testUser.nickname}
 </body>
 </html>

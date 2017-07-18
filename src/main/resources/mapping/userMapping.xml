@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.dao.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.example.pojo.User" >
+<mapper namespace="com.example.dao.TestUserMapper" >
+  <resultMap id="BaseResultMap" type="com.example.pojo.TestUser" >
     <id column="u_id" property="uId" jdbcType="BIGINT" />
     <result column="nickname" property="nickname" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
@@ -13,21 +13,21 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from Users
+    from test_users
     where u_id = #{uId,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from Users
+    delete from test_users
     where u_id = #{uId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.example.pojo.User" >
-    insert into Users (u_id, nickname, email, 
+  <insert id="insert" parameterType="com.example.pojo.TestUser" >
+    insert into test_users (nickname, email,
       password)
-    values (#{uId,jdbcType=BIGINT}, #{nickname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+    values (#{nickname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR},
       #{password,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.example.pojo.User" >
-    insert into Users
+  <insert id="insertSelective" parameterType="com.example.pojo.TestUser" >
+    insert into test_users
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="uId != null" >
         u_id,
@@ -57,8 +57,8 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.example.pojo.User" >
-    update Users
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.pojo.TestUser" >
+    update test_users
     <set >
       <if test="nickname != null" >
         nickname = #{nickname,jdbcType=VARCHAR},
@@ -72,8 +72,8 @@
     </set>
     where u_id = #{uId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.example.pojo.User" >
-    update Users
+  <update id="updateByPrimaryKey" parameterType="com.example.pojo.TestUser" >
+    update test_users
     set nickname = #{nickname,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR}

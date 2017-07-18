@@ -1,6 +1,6 @@
 package com.example.pojo;
 
-public class User {
+public class TestUser {
     private Long uId;
 
     private String nickname;
@@ -43,7 +43,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "TestUser{" +
                 "uId=" + uId +
                 ", nickname='" + nickname + '\'' +
                 ", email='" + email + '\'' +

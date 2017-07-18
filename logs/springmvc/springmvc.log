@@ -101,7 +101,7 @@
 [DEBUG] [2016-12-23 17:17:06][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [TRACE] [2016-12-23 17:17:06][org.mybatis.spring.mapper.ClassPathMapperScanner]Scanning file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
 [DEBUG] [2016-12-23 17:17:06][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 17:17:06][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 17:17:06][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 17:17:06][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 17:17:06][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 17:17:06][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -268,13 +268,13 @@
 [DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
 [TRACE] [2016-12-23 17:17:07][org.springframework.beans.CachedIntrospectionResults]Getting BeanInfo for class [com.example.service.impl.HelloWorldServiceImpl]
 [TRACE] [2016-12-23 17:17:07][org.springframework.beans.CachedIntrospectionResults]Caching PropertyDescriptors for class [com.example.service.impl.HelloWorldServiceImpl]
 [TRACE] [2016-12-23 17:17:07][org.springframework.beans.CachedIntrospectionResults]Found bean property 'class' of type [java.lang.Class]
 [TRACE] [2016-12-23 17:17:07][org.springframework.beans.CachedIntrospectionResults]Found bean property 'userById'
-[DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 17:17:07][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -332,11 +332,11 @@
 [DEBUG] [2016-12-23 17:17:07][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d5b810e] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 17:17:07][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 17:17:08][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 17:17:08][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 17:17:08][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[TRACE] [2016-12-23 17:17:08][com.example.dao.UserMapper.selectByPrimaryKey]<==    Columns: u_id, nickname, email, password
-[TRACE] [2016-12-23 17:17:08][com.example.dao.UserMapper.selectByPrimaryKey]<==        Row: 000000000000001, shasha, 123@qq.com, 123456
-[DEBUG] [2016-12-23 17:17:08][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 17:17:08][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 17:17:08][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[TRACE] [2016-12-23 17:17:08][com.example.dao.TestUserMapper.selectByPrimaryKey]<==    Columns: u_id, nickname, email, password
+[TRACE] [2016-12-23 17:17:08][com.example.dao.TestUserMapper.selectByPrimaryKey]<==        Row: 000000000000001, shasha, 123@qq.com, 123456
+[DEBUG] [2016-12-23 17:17:08][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 17:17:08][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d5b810e]
 [DEBUG] [2016-12-23 17:17:08][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 17:17:08][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}
@@ -408,7 +408,7 @@
 [DEBUG] [2016-12-23 17:18:38][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Searching directory [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao] for files matching pattern [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/**/*.class]
 [DEBUG] [2016-12-23 17:18:38][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [DEBUG] [2016-12-23 17:18:38][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 17:18:38][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 17:18:38][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -465,9 +465,9 @@
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
-[DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 17:18:38][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -502,9 +502,9 @@
 [DEBUG] [2016-12-23 17:18:38][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52af26ee] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 17:18:38][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 17:18:38][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 17:18:38][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 17:18:39][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[DEBUG] [2016-12-23 17:18:39][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 17:18:38][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 17:18:39][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[DEBUG] [2016-12-23 17:18:39][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 17:18:39][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52af26ee]
 [DEBUG] [2016-12-23 17:18:39][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 17:18:39][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}
@@ -573,7 +573,7 @@
 [DEBUG] [2016-12-23 18:44:32][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Searching directory [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao] for files matching pattern [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/**/*.class]
 [DEBUG] [2016-12-23 18:44:32][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [DEBUG] [2016-12-23 18:44:32][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 18:44:32][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 18:44:32][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -630,9 +630,9 @@
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
-[DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:44:32][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -667,9 +667,9 @@
 [DEBUG] [2016-12-23 18:44:32][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 18:44:32][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 18:44:33][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 18:44:33][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 18:44:33][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[DEBUG] [2016-12-23 18:44:33][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 18:44:33][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 18:44:33][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[DEBUG] [2016-12-23 18:44:33][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 18:44:33][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1]
 [DEBUG] [2016-12-23 18:44:33][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 18:44:33][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}
@@ -738,7 +738,7 @@
 [DEBUG] [2016-12-23 18:46:51][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Searching directory [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao] for files matching pattern [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/**/*.class]
 [DEBUG] [2016-12-23 18:46:51][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [DEBUG] [2016-12-23 18:46:51][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 18:46:51][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 18:46:51][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -795,9 +795,9 @@
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
-[DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:46:51][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -832,9 +832,9 @@
 [DEBUG] [2016-12-23 18:46:51][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 18:46:51][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 18:46:51][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 18:46:51][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 18:46:51][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[DEBUG] [2016-12-23 18:46:51][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 18:46:51][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 18:46:51][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[DEBUG] [2016-12-23 18:46:51][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 18:46:51][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1]
 [DEBUG] [2016-12-23 18:46:51][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 18:46:51][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}
@@ -903,7 +903,7 @@
 [DEBUG] [2016-12-23 18:47:54][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Searching directory [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao] for files matching pattern [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/**/*.class]
 [DEBUG] [2016-12-23 18:47:54][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [DEBUG] [2016-12-23 18:47:54][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 18:47:54][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 18:47:54][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -960,9 +960,9 @@
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
-[DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:47:54][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -997,9 +997,9 @@
 [DEBUG] [2016-12-23 18:47:54][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 18:47:54][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 18:47:55][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 18:47:55][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 18:47:55][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[DEBUG] [2016-12-23 18:47:55][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 18:47:55][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 18:47:55][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[DEBUG] [2016-12-23 18:47:55][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 18:47:55][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1]
 [DEBUG] [2016-12-23 18:47:55][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 18:47:55][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}
@@ -1068,7 +1068,7 @@
 [DEBUG] [2016-12-23 18:51:13][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Searching directory [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao] for files matching pattern [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/**/*.class]
 [DEBUG] [2016-12-23 18:51:13][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [DEBUG] [2016-12-23 18:51:13][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 18:51:13][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 18:51:13][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -1125,9 +1125,9 @@
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
-[DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:51:13][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -1162,9 +1162,9 @@
 [DEBUG] [2016-12-23 18:51:13][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 18:51:13][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 18:51:13][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 18:51:13][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 18:51:13][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[DEBUG] [2016-12-23 18:51:13][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 18:51:13][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 18:51:13][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[DEBUG] [2016-12-23 18:51:13][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 18:51:13][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1]
 [DEBUG] [2016-12-23 18:51:13][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 18:51:13][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}
@@ -1233,7 +1233,7 @@
 [DEBUG] [2016-12-23 18:52:45][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Searching directory [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao] for files matching pattern [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/**/*.class]
 [DEBUG] [2016-12-23 18:52:45][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [DEBUG] [2016-12-23 18:52:45][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 18:52:45][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 18:52:45][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 18:52:45][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:52:45][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:52:45][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -1290,9 +1290,9 @@
 [DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
-[DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:52:46][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -1327,9 +1327,9 @@
 [DEBUG] [2016-12-23 18:52:46][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 18:52:46][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 18:52:46][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 18:52:46][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 18:52:46][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[DEBUG] [2016-12-23 18:52:46][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 18:52:46][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 18:52:46][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[DEBUG] [2016-12-23 18:52:46][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 18:52:46][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1]
 [DEBUG] [2016-12-23 18:52:46][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 18:52:46][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}
@@ -1398,7 +1398,7 @@
 [DEBUG] [2016-12-23 18:53:25][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Searching directory [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao] for files matching pattern [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/**/*.class]
 [DEBUG] [2016-12-23 18:53:25][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [DEBUG] [2016-12-23 18:53:25][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 18:53:25][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 18:53:25][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 18:53:25][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:53:25][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 18:53:25][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -1455,9 +1455,9 @@
 [DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
-[DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 18:53:26][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -1492,9 +1492,9 @@
 [DEBUG] [2016-12-23 18:53:26][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 18:53:26][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 18:53:26][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 18:53:26][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 18:53:26][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[DEBUG] [2016-12-23 18:53:26][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 18:53:26][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 18:53:26][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[DEBUG] [2016-12-23 18:53:26][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 18:53:26][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fd83fc1]
 [DEBUG] [2016-12-23 18:53:26][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 18:53:26][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}
@@ -1563,7 +1563,7 @@
 [DEBUG] [2016-12-23 19:02:15][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Searching directory [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao] for files matching pattern [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/**/*.class]
 [DEBUG] [2016-12-23 19:02:15][org.springframework.core.io.support.PathMatchingResourcePatternResolver]Resolved location pattern [classpath*:com/example/dao/**/*.class] to resources [file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]]
 [DEBUG] [2016-12-23 19:02:15][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [/Users/intern07/IdeaProjects/springmvc/target/classes/com/example/dao/UserMapper.class]
-[DEBUG] [2016-12-23 19:02:15][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.UserMapper' mapperInterface
+[DEBUG] [2016-12-23 19:02:15][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.example.dao.TestUserMapper' mapperInterface
 [DEBUG] [2016-12-23 19:02:15][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 19:02:15][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'propertyConfigurer'
 [DEBUG] [2016-12-23 19:02:15][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
@@ -1620,9 +1620,9 @@
 [DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'userMapper'
 [DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'HelloWorldService'
 [DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'HelloWorldService'
-[DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.annotation.InjectionMetadata]Registered injected element on class [com.example.service.impl.HelloWorldServiceImpl]: ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'HelloWorldService' to allow for resolving potential circular references
-[DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.UserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
+[DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.annotation.InjectionMetadata]Processing injected method of bean 'HelloWorldService': ResourceElement for private com.example.dao.TestUserMapper com.example.service.impl.HelloWorldServiceImpl.userDao
 [DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.support.DefaultListableBeanFactory]Returning cached instance of singleton bean 'userMapper'
 [DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'HelloWorldService'
 [DEBUG] [2016-12-23 19:02:16][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'helloWorld'
@@ -1657,9 +1657,9 @@
 [DEBUG] [2016-12-23 19:02:16][org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b2abca6] was not registered for synchronization because synchronization is not active
 [DEBUG] [2016-12-23 19:02:16][org.springframework.jdbc.datasource.DataSourceUtils]Fetching JDBC Connection from DataSource
 [DEBUG] [2016-12-23 19:02:16][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [jdbc:mysql://127.0.0.1:3306/demo, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
-[DEBUG] [2016-12-23 19:02:16][com.example.dao.UserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ? 
-[DEBUG] [2016-12-23 19:02:16][com.example.dao.UserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
-[DEBUG] [2016-12-23 19:02:16][com.example.dao.UserMapper.selectByPrimaryKey]<==      Total: 1
+[DEBUG] [2016-12-23 19:02:16][com.example.dao.TestUserMapper.selectByPrimaryKey]==>  Preparing: select u_id, nickname, email, password from Users where u_id = ?
+[DEBUG] [2016-12-23 19:02:16][com.example.dao.TestUserMapper.selectByPrimaryKey]==> Parameters: 1(Long)
+[DEBUG] [2016-12-23 19:02:16][com.example.dao.TestUserMapper.selectByPrimaryKey]<==      Total: 1
 [DEBUG] [2016-12-23 19:02:16][org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b2abca6]
 [DEBUG] [2016-12-23 19:02:16][org.springframework.jdbc.datasource.DataSourceUtils]Returning JDBC Connection to DataSource
 [INFO] [2016-12-23 19:02:16][TestMyBatis]User{uId=1, nickname='shasha', email='123@qq.com', password='123456'}

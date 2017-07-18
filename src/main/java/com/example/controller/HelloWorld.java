@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.pojo.User;
+import com.example.pojo.TestUser;
 import com.example.service.HelloWorldService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,12 +29,14 @@ public class HelloWorld {
         //在后台输出
         logger.debug("******************  hello/world");
         int id = Integer.parseInt(request.getParameter("id"));
-        //User u = this.helloWorldService.getUserById(id);
-        User u = new User();
-        u.setEmail("test");
-        u.setNickname("test");
-        u.setPassword("test");
-        u.setuId(123123l);
+        //TestUser u = this.helloWorldService.getUserById(id);
+//        TestUser u = new TestUser();
+//        u.setEmail("test");
+//        u.setNickname("test");
+//        u.setPassword("test");
+//        u.setuId(123123l);
+        String test="test";
+        TestUser u = helloWorldService.putNewUser(test,test,test);
         model.addAttribute("user",u);
         return "HelloWorld";
     }

@@ -14,7 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 //import com.alibaba.fastjson.JSON;
-import com.example.pojo.User;
+import com.example.pojo.TestUser;
 import com.example.service.HelloWorldService;
 
 @RunWith(SpringJUnit4ClassRunner.class) // 表示继承了SpringJUnit4ClassRunner类
@@ -34,9 +34,9 @@ public class TestMyBatis {
 
     @Test
     public void test() {
-        User user = service.getUserById(1);
-        // System.out.println(user.getUserName());
-        // logger.info("值："+user.getUserName());
-        logger.info(user.toString());
+        TestUser testUser = service.getUserById(1);
+        // System.out.println(testUser.getUserName());
+        // logger.info("值："+testUser.getUserName());
+        logger.info(testUser.toString());
     }
 }
