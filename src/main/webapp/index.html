@@ -6,9 +6,9 @@
 </head>
 <body>
 <div id="block">
-    <button class="btn">get hello/world {id:1}</button>
+    <button class="btn">get hello/world {"id":1}</button>
     <p>985</p>
-    <button class="btn">post hello/rest/123 {msg:balabala}</button>
+    <button class="btn">post hello/rest/123 {"msg":"balabala"}</button>
     <p>412</p>
     <button class="btn">try HelloWorld111.jsp</button>
     <p>312</p>
@@ -28,11 +28,13 @@
             var para = $(this).html();
             var opts = para.split(" ");
             console.log(opts);
+            var data = JSON.parse(opts[2]);
+            console.log(data);
             var settings = {
                 type:opts[0].toUpperCase(),
                 //contentType
                 url:opts[1],
-                data:opts[2],
+                data:data,
                 async:false
             };
             console.log(settings);

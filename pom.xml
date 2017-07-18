@@ -154,6 +154,12 @@
             <artifactId>commons-codec</artifactId>
             <version>1.9</version>
         </dependency>
+        <!-- void ValidationException Unable to create a Configuration, because no Bean Validation provider could be found. -->
+        <!--dependency>
+            <groupId>org.apache.bval</groupId>
+            <artifactId>bval-jsr303</artifactId>
+            <version>0.5</version>
+        </dependency-->
     </dependencies>
 
     <build>

@@ -24,12 +24,17 @@ public class HelloWorld {
     protected Logger logger = Logger.getLogger(HelloWorld.class);
 
     //this way leads to a jsp file named "HelloWorld";
-    @RequestMapping("/world")
+    @RequestMapping(value = "/world",method = RequestMethod.GET)
     public String toHelloWorld(HttpServletRequest request, Model model){
         //在后台输出
         logger.debug("******************  hello/world");
         int id = Integer.parseInt(request.getParameter("id"));
-        User u = this.helloWorldService.getUserById(id);
+        //User u = this.helloWorldService.getUserById(id);
+        User u = new User();
+        u.setEmail("test");
+        u.setNickname("test");
+        u.setPassword("test");
+        u.setuId(123123l);
         model.addAttribute("user",u);
         return "HelloWorld";
     }

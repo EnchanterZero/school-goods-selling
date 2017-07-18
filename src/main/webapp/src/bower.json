@@ -1,5 +1,5 @@
 {
-  "name": "demoClient",
+  "name": "webapp",
   "authors": [
     "zhenyuy <zhenyuy@curacloudcorp.com>"
   ],
@@ -14,5 +14,8 @@
     "lib",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
 }
